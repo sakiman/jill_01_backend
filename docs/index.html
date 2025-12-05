@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bet Limit Management - OPS Dashboard</title>
+    <link rel="icon" href="./favicon_original.png" type="image/png">
+    <!-- Tailwind CSS for Development (CDN) - Console warning is expected. For production, use npm build. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
@@ -254,7 +256,7 @@
                 <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wide mb-3 border-b pb-2">Limit Configuration</h3>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="col-span-1 border rounded-md p-3">
+                    <div class="col-span-1 border rounded-md p-3 limit-group">
                         <div class="space-y-3">
                             <div>
                                 <label class="text-xs font-bold text-gray-600">Limit</label>
@@ -263,6 +265,11 @@
                                     <input type="text" placeholder="Max" value="10000" class="self-input-style block w-1/2 border border-gray-300 rounded-md py-1 px-2 text-sm">
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1 border rounded-md p-3 limit-group">
+                        <div class="space-y-3">
                             <div>
                                 <label class="text-xs font-bold text-gray-600">B/P (Banker/Player)</label>
                                 <div class="flex gap-2 mt-1">
@@ -270,6 +277,11 @@
                                     <input type="text" placeholder="Max" value="10000" class="self-input-style block w-1/2 border border-gray-300 rounded-md py-1 px-2 text-sm">
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1 border rounded-md p-3 limit-group">
+                        <div class="space-y-3">
                             <div>
                                 <label class="text-xs font-bold text-gray-600">Tie</label>
                                 <div class="flex gap-2 mt-1">
@@ -280,7 +292,7 @@
                         </div>
                     </div>
 
-                    <div class="col-span-1 border rounded-md p-3">
+                    <div class="col-span-1 border rounded-md p-3 limit-group">
                         <div class="space-y-3">
                             <div>
                                 <label class="text-xs font-bold text-gray-600">B/P Pair</label>
@@ -289,6 +301,11 @@
                                     <input type="text" placeholder="Max" value="900" class="self-input-style block w-1/2 border border-gray-300 rounded-md py-1 px-2 text-sm">
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1 border rounded-md p-3 limit-group">
+                        <div class="space-y-3">
                             <div>
                                 <label class="text-xs font-bold text-gray-600">B/P Bonus</label>
                                 <div class="flex gap-2 mt-1">
@@ -296,6 +313,11 @@
                                     <input type="text" placeholder="Max" value="900" class="self-input-style block w-1/2 border border-gray-300 rounded-md py-1 px-2 text-sm">
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1 border rounded-md p-3 limit-group">
+                        <div class="space-y-3">
                             <div>
                                 <label class="text-xs font-bold text-gray-600">Big / Small</label>
                                 <div class="flex gap-2 mt-1">
@@ -305,7 +327,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-1 border rounded-md p-3">
+
+                    <div class="col-span-1 border rounded-md p-3 limit-group">
                         <div class="space-y-3">
                             <div>
                                 <label class="text-xs font-bold text-gray-600">Turtle</label>
@@ -314,6 +337,11 @@
                                     <input type="text" placeholder="Max" value="2000" class="self-input-style block w-1/2 border border-gray-300 rounded-md py-1 px-2 text-sm">
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1 border rounded-md p-3 limit-group">
+                        <div class="space-y-3">
                             <div>
                                 <label class="text-xs font-bold text-gray-600">Phoenix</label>
                                 <div class="flex gap-2 mt-1">
@@ -321,6 +349,11 @@
                                     <input type="text" placeholder="Max" value="400" class="self-input-style block w-1/2 border border-gray-300 rounded-md py-1 px-2 text-sm">
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1 border rounded-md p-3 limit-group">
+                        <div class="space-y-3">
                             <div>
                                 <label class="text-xs font-bold text-gray-600">Super Six</label>
                                 <div class="flex gap-2 mt-1">
