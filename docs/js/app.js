@@ -1,4 +1,3 @@
-
 function parseLimit(str) {
     if (!str) return {min: '', max: ''};
     const parts = str.replace(/,/g, '').split('-').map(s => s.trim());
@@ -48,15 +47,6 @@ document.querySelectorAll('.edit-btn').forEach(btn => {
     });
 });
 
-document.getElementById('btnCancel').addEventListener('click', () => {
-    document.getElementById('editModal').classList.add('hidden');
-});
-
-document.getElementById('btnSave').addEventListener('click', () => {
-    console.log("Saving demo data... (Prototype)");
-    alert("Demo only: Values logged in console.");
-});
-
 function toggleModal(action, id) {
     const body = document.querySelector('body');
     const modal = document.querySelector('.modal');
@@ -74,22 +64,32 @@ function toggleModal(action, id) {
         body.classList.add('modal-active');
 
         if (action === 'create') {
-            modalTitle.innerText = "Create New Bet Limit";
+            if (modalTitle) modalTitle.innerText = "Create New Bet Limit";
             // Enable selection for new creation
-            websiteSelect.disabled = false;
-            currencySelect.disabled = false;
-            websiteSelect.value = "GlobalBet_Asia (1001)"; // Default
+            if (websiteSelect) {
+                websiteSelect.disabled = false;
+                websiteSelect.value = "GlobalBet_Asia (1001)"; // Default
+            }
+            if (currencySelect) currencySelect.disabled = false;
         } else if (action === 'edit') {
-            modalTitle.innerText = `Edit Bet Limit - ID ${id}`;
+            if (modalTitle) modalTitle.innerText = `Edit Bet Limit - ID ${id}`;
             // Often in these systems, you can't change the currency/site once created, only the limits
             // websiteSelect.disabled = true;
             // currencySelect.disabled = true;
         }
-    }
-    }
 
-    // Close modal when clicking escape key
-    document.onkeydown = function(evt) {
+        // 自動聚焦邏輯 (Auto-focus)
+        setTimeout(function() {
+            const input = document.getElementById('limitMinInput');
+            if (input) {
+                input.focus();
+            }
+        }, 100); // 設定 100ms 延遲以配合 Modal CSS transition 動畫
+    }
+}
+
+// Close modal when clicking escape key
+document.onkeydown = function(evt) {
     evt = evt || window.event;
     var isEscape = false;
     if ("key" in evt) {

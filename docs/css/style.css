@@ -1,3 +1,6 @@
+:root {
+    --modal-bg: rgb(255, 255, 255);
+}
 
 body { font-family: 'Inter', sans-serif; }
 
@@ -11,7 +14,8 @@ body { font-family: 'Inter', sans-serif; }
 
 .hidden { opacity: 0; pointer-events: none; }
 
-/* Moved from inline <style> in index.html */
+
+/* 調整背景顏色為淺灰色 */
 body { background-color: #f3f4f6; }
 
 /* 自定義 Toggle Switch 樣式 */
@@ -30,6 +34,11 @@ body.modal-active {
     overflow-y: visible !important;
 }
 
+/* 調整 Modal 背景顏色 */
+.modal .modal-container {
+    background-color: var(--modal-bg);
+}
+
 /* 表格內的輸入框優化 */
 .input-compact {
     width: 100%;
@@ -42,5 +51,12 @@ body.modal-active {
 .input-compact:focus {
     border-color: #6366F1;
     box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+    outline: none;
+}
+
+/* 新增：自定義輸入框 Focus 樣式 (淺黃色背景) */
+.self-input-style:focus {
+    background-color: #FFF8E0;
+    border-color: #FBBF24;
     outline: none;
 }
