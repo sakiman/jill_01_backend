@@ -1,0 +1,46 @@
+
+body { font-family: 'Inter', sans-serif; }
+
+.input {
+    width: 100%;
+    border: 1px solid #D1D5DB;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.hidden { opacity: 0; pointer-events: none; }
+
+/* Moved from inline <style> in index.html */
+body { background-color: #f3f4f6; }
+
+/* 自定義 Toggle Switch 樣式 */
+.toggle-checkbox:checked {
+    right: 0;
+    border-color: #10B981;
+}
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #10B981;
+}
+
+/* Modal 動畫 */
+.modal { transition: opacity 0.25s ease; }
+body.modal-active {
+    overflow-x: hidden;
+    overflow-y: visible !important;
+}
+
+/* 表格內的輸入框優化 */
+.input-compact {
+    width: 100%;
+    border: 1px solid #D1D5DB;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+.input-compact:focus {
+    border-color: #6366F1;
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+    outline: none;
+}
